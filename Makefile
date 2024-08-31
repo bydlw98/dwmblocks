@@ -23,14 +23,17 @@ blocks.h:
 	cp blocks.def.h $@
 
 clean:
-	rm -f *.o *.gch dwmblocks config.h
+	rm -f *.o *.gch dwmblocks blocks.h
 
 install: dwmblocks
 	mkdir -p ${DESTDIR}${PREFIX}/bin
 	cp -f dwmblocks ${DESTDIR}${PREFIX}/bin
 	chmod 755 ${DESTDIR}${PREFIX}/bin/dwmblocks
+	cp -f command/dwmblocks_volume ${DESTDIR}${PREFIX}/bin
+	chmod 755 ${DESTDIR}${PREFIX}/bin/dwmblocks_volume
 
 uninstall:
 	rm -f ${DESTDIR}${PREFIX}/bin/dwmblocks
+	rm -f ${DESTDIR}${PREFIX}/bin/dwmblocks_volume
 
 .PHONY: all options clean install uninstall
