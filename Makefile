@@ -29,6 +29,8 @@ install: dwmblocks
 	mkdir -p ${DESTDIR}${PREFIX}/bin
 	cp -f dwmblocks ${DESTDIR}${PREFIX}/bin
 	chmod 755 ${DESTDIR}${PREFIX}/bin/dwmblocks
+	cp -f command/dwmblocks_wifi ${DESTDIR}${PREFIX}/bin
+	chmod 755 ${DESTDIR}${PREFIX}/bin/dwmblocks_wifi
 	cp -f command/dwmblocks_volume ${DESTDIR}${PREFIX}/bin
 	chmod 755 ${DESTDIR}${PREFIX}/bin/dwmblocks_volume
 	cp -f command/dwmblocks_battery ${DESTDIR}${PREFIX}/bin
@@ -36,6 +38,7 @@ install: dwmblocks
 
 uninstall:
 	rm -f ${DESTDIR}${PREFIX}/bin/dwmblocks
+	rm -f ${DESTDIR}${PREFIX}/bin/dwmblocks_wifi
 	rm -f ${DESTDIR}${PREFIX}/bin/dwmblocks_volume
 	rm -f ${DESTDIR}${PREFIX}/bin/dwmblocks_battery
 
