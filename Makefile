@@ -31,9 +31,12 @@ install: dwmblocks
 	chmod 755 ${DESTDIR}${PREFIX}/bin/dwmblocks
 	cp -f command/dwmblocks_volume ${DESTDIR}${PREFIX}/bin
 	chmod 755 ${DESTDIR}${PREFIX}/bin/dwmblocks_volume
+	cp -f command/dwmblocks_battery ${DESTDIR}${PREFIX}/bin
+	chmod 755 ${DESTDIR}${PREFIX}/bin/dwmblocks_battery
 
 uninstall:
 	rm -f ${DESTDIR}${PREFIX}/bin/dwmblocks
 	rm -f ${DESTDIR}${PREFIX}/bin/dwmblocks_volume
+	rm -f ${DESTDIR}${PREFIX}/bin/dwmblocks_battery
 
 .PHONY: all options clean install uninstall
